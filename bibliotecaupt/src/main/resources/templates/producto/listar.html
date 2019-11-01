@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{esqueleto/esqueleto}"
+>
+
+<body>
+
+    <div layout:fragment="content" class="container">
+        <div class="row">
+            <div class="card">
+                <div class="card-title">
+                    <h1 class="center">Lista de productos</h1>
+                </div>
+                <div class="card-content">
+                    <table class="responsive-table ">
+                        <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Codigo</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        <th:block th:each="producto : ${listadoProducto}">
+                            <tr>
+                                <td th:text="${producto.id}"></td>
+                                <td th:text="${producto.codigo}"></td>
+                                <td th:text="${producto.nombre}"></td>
+                                <td th:text="${producto.precio}"></td>
+                                <td th:text="${producto.cantidad}"></td>
+                                <td>
+                                    <a class="btn-small" href="" th:href="@{/producto/editar/{id}(id=${producto.id})}">Editar</a>
+                                    <a class="btn-small" href="" th:href="@{/producto/eliminar/{id}(id=${producto.id})}">Eliminar</a>
+                                </td>
+                            </tr>
+                        </th:block>
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

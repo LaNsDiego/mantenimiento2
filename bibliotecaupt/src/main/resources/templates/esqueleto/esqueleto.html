@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/materialize.min.css" th:href="@{/css/materialize.min.css}">
+    <link rel="stylesheet" href="../static/css/estilos.css" th:href="@{/css/estilos.css}">
+    <script th:src="@{/js/materialize.min.js}"></script>
+</head>
+<body>
+<!--    <div th:replace="esqueleto/header::header"></div>-->
+    <div class="row">
+        <div th:replace="esqueleto/sidebar::sidebar"></div>
+        <div class="col l9">
+            <div layout:fragment="content"></div>
+        </div>
+
+    </div>
+<script>
+    window.onload =  function() {
+        M.AutoInit();
+        // let htmlSideNav = document.getElementById("slide-out");
+        // let sideNav = M.Sidenav.getInstance(htmlSideNav);
+        // sideNav.open();
+
+    }
+</script>
+</body>
+</html>

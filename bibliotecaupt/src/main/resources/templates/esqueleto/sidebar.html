@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+<div class="col l3" th:fragment="sidebar">
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header"><i class="material-icons">accessibility</i>Empleado</div>
+            <div class="collapsible-body p0">
+                <ul>
+                    <li><a href="" th:href="@{/empleado/listar/}" class="item-content-sidenav">Listar</a></li>
+                    <li><a th:href="@{/empleado/agregar}" class="item-content-sidenav">Agregar</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">account_box</i>Cargo</div>
+            <div class="collapsible-body p0">
+                <ul>
+                    <li><a href="" th:href="@{/cargo/listar}" class="item-content-sidenav">Listar</a></li>
+                    <li><a href="" th:href="@{/cargo/agregar}" class="item-content-sidenav">Agregar</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">add_shopping_cart</i>Producto</div>
+            <div class="collapsible-body p0">
+                <ul>
+                    <li><a href="#" th:href="@{/producto/listar}" class="item-content-sidenav">Listar</a></li>
+                    <li><a href="#" th:href="@{/producto/agregar}" class="item-content-sidenav">Agregar</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">people</i>Cliente</div>
+            <div class="collapsible-body p0">
+                <ul>
+                    <li><a href="#" th:href="@{/cliente/listar}" class="item-content-sidenav">Listar</a></li>
+                    <li><a href="#" th:href="@{/cliente/agregar}" class="item-content-sidenav">Agregar</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

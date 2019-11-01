@@ -1,0 +1,39 @@
+.p0{
+    padding: 0;
+}
+
+.p1{
+    padding:8px
+}
+
+.p2{
+    padding:16px
+}
+
+.p3{
+    padding:24px
+}
+
+.p4{
+    padding:32px
+}
+
+.border{
+    border:1px solid gray;
+}
+
+.dblock{
+    display: block;
+}
+
+.item-content-sidenav{
+    display: block;
+    padding: 16px 16px 16px 64px;
+    font-weight: normal;
+    color: gray;
+}
+
+.item-content-sidenav:hover{
+    background: rgba(235,235,235,1);
+}
+

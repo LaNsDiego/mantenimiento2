@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{esqueleto/esqueleto}"
+>
+
+<body>
+
+<div layout:fragment="content" class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-title">
+                <h1 class="center">Lista de clientes</h1>
+            </div>
+            <div class="card-content">
+                <table class="responsive-table ">
+                    <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>DNI</th>
+                        <th>Apellidos</th>
+                        <th>Nombres</th>
+                        <th>Telefono</th>
+                        <th>Correo</th>
+                        <th>Acciones</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <th:block th:each="cliente : ${listadoCliente}">
+                        <tr>
+                            <td th:text="${cliente.id}"></td>
+                            <td th:text="${cliente.dni}"></td>
+                            <td th:text="${cliente.apellidos}"></td>
+                            <td th:text="${cliente.nombres}"></td>
+                            <td th:text="${cliente.telefono}"></td>
+                            <td th:text="${cliente.correo}"></td>
+
+                            <td>
+                                <a class="btn-small" href="" th:href="@{/cliente/editar/{id}(id=${cliente.id})}">Editar</a>
+                                <a class="btn-small" href="" th:href="@{/cliente/eliminar/{id}(id=${cliente.id})}">Eliminar</a>
+                            </td>
+                        </tr>
+                    </th:block>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

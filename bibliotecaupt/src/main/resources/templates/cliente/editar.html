@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{esqueleto/esqueleto}"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Editar Cliente</title>
+</head>
+<body>
+    <div layout:fragment="content" class="container">
+        <div class="row">
+            <form class="col s12" action="#" th:action="@{/cliente/agregar}"  method="post">
+                <input type="hidden" name="id" th:value="${cliente.id}">
+                <div class="input-field col s12">
+                        <input name="dni" id="dni" type="text" th:value="${cliente.dni}" class="validate">
+                    <label for="dni">Codigo</label>
+                </div>
+                <div class="input-field col s12">
+                    <input name="nombres" id="nombres" type="text" th:value="${cliente.nombres}" class="validate">
+                    <label for="nombres">Nombres</label>
+                </div>
+                <div class="input-field col s12">
+                    <input name="apellidos" id="apellidos" type="text" th:value="${cliente.apellidos}" class="validate">
+                    <label for="apellidos">Apellidos</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <input name="telefono" id="telefono" type="text" th:value="${cliente.telefono}" class="validate">
+                    <label for="telefono">Telefono</label>
+                </div>
+                <div class="input-field col s12">
+                    <input name="correo" id="correo" type="text" th:value="${cliente.correo}" class="validate">
+                    <label for="correo">Correo</label>
+                </div>
+                <div class="col s12">
+                    <button class="waves-effect waves-light btn" type="submit" >Editar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
